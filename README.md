@@ -276,7 +276,7 @@ Phones only allow the camera on **HTTPS** pages:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkhanareeb17%2Froom-guard)
 
-Or: push to GitHub → **vercel.com → Add New → Project → Import** this repo → **Deploy**. No settings or environment variables are needed. Security headers (`Permissions-Policy: camera=(self)`, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, COOP) are set in `next.config.ts`.
+Or: push to GitHub → **vercel.com → Add New → Project → Import** this repo → **Deploy**. No environment variables are needed. `vercel.json` pins the framework to **Next.js**, so the project builds correctly even if the dashboard's Framework Preset was set to "Other" during import. (If you ever see Vercel's `404: NOT_FOUND` page while `/sw.js` loads, the project was deployed as a static site: check **Settings → Build and Deployment → Framework Preset = Next.js** and that *Output Directory* has no override, then redeploy.) Security headers (`Permissions-Policy: camera=(self)`, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, COOP) are set in `next.config.ts`.
 
 ---
 
